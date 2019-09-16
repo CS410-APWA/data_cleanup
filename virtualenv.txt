@@ -1,0 +1,48 @@
+Hi! This is a guideline for setting up virtual environments for this project.
+
+If you are using Python2, you'll want to install the virtualenv tool with pip:
+```
+pip install virtualenv
+```
+Otherwise, you should already have the venv module from the standard library.
+
+I also recommend using virtualenvwrapper - it conveniently stores your virtual 
+environments in one location. Install with:
+```
+# Mac or Linux
+pip install virtualenvwrapper
+# Windows
+pip install virtualenvwrapper-win
+```
+
+Then, put the following in either your ~/.bashrc or ~/.profile:
+```
+export WORKON_HOME=$HOME/.virtualenvs   # Optional, overrides built-in
+export PROJECT_HOME=$HOME/projects      # Optional, you should customize this
+source /usr/local/bin/virtualenvwrapper.sh
+```
+Reload your shell for your changes to take effect.
+
+The following will be how to use virtualenvwrapper.
+
+Making a new virtual environment:
+```
+mkvirtualenv my-new-environment
+```
+
+Activating your new virtual environment:
+```
+workon my-new-environment
+```
+
+Deactivate your new virtual environment:
+```
+deactivate
+```
+
+If for some reason you want to get rid of your environment:
+```
+rmvirtualenv my-new-environment
+```
+
+Best of luck!
